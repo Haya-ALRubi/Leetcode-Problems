@@ -7,18 +7,13 @@ public class Solution
             if (digits[i] < 9)
             {
                 digits[i]++;
-                break;
+                return digits;
             }
-            //return digits;
-            if (digits[i] == 9)
-            {
-                digits[i] = 0;
-                int[] digitsTwo = new int[digits.Length + 1];
-                digitsTwo[0] = 1;
-                return digitsTwo;
-            }
+            digits[i] = 0;
         }
-        return digits;
-
+        int[] digitsTwo = new int[digits.Length + 1];
+        digitsTwo[0] = 1;
+        return digitsTwo;
     }
+
 }
